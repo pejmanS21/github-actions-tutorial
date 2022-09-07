@@ -7,7 +7,8 @@ WORKDIR /app
 
 RUN pip3 install -U pip
 
-RUN --mount=type=cache,target=/root/.cache \
-    pip3 install -r requirements.txt
+RUN pip3 install -r requirements.txt
 
-CMD ["python3", "app.py"]
+EXPOSE 8000
+
+CMD ["uvicorn", "app:app", "--reload", "--host", "0.0.0.0", "--port", "8000"]
