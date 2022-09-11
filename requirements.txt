@@ -2,3 +2,4 @@ numpy
 fastapi
 uvicorn
 pre-commit
+pytest
