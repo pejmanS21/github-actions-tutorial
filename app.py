@@ -1,6 +1,7 @@
 import random
 
 import numpy as np
+import uvicorn
 from fastapi import FastAPI
 
 app = FastAPI()
@@ -22,4 +23,4 @@ def rnd_endpoint():
 
 
 if __name__ == "__main__":
-    print(random_gen(random.randint(1, 10), 1))
+    uvicorn.run("app:app", host="0.0.0.0", port=8000)
