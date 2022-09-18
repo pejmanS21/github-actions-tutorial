@@ -39,7 +39,7 @@ pre-commit:     ## 🔎 Run pre-commit hooks
 test:     ## 🎯 Unit tests
 	make create \
 	&& make install \
-	&& pytest -v test_functions.py -s --disable-pytest-warnings
+	&& python -m pytest test_functions.py
 
 run:      ## 🏃 Run the server locally using Python & fastapi
 	make create \

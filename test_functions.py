@@ -1,8 +1,5 @@
 import random
 import time
-
-import pytest
-
 from app import random_gen
 
 
@@ -14,3 +11,4 @@ def test_about_num():
     randnum = random.randint(1, 100)
     assert randnum >= 1
     assert randnum <= 100
+
